@@ -9,7 +9,7 @@ function App() {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/bots')
+    axios.get('http://localhost:8001/bots')
       .then(response => setBots(response.data))
       .catch(error => console.error("Error fetching bots:", error));
   }, []);
@@ -26,7 +26,7 @@ function App() {
 
   const dischargeBot = async (botId) => {
     try {
-      await axios.delete(`http://localhost:8000/bots/${botId}`);
+      await axios.delete(`http://localhost:8001/bots/${botId}`);
       setBots(bots.filter(bot => bot.id !== botId));
       setArmy(army.filter(bot => bot.id !== botId));
     } catch (error) {
