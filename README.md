@@ -30,7 +30,7 @@ As a user, you can:
 
 3. Start the JSON Server:
     ``` bash
-    json server --watch db.json --port 8001
+    json server --watch ./src/data/db.json --port 8001
     ```
 
 4. Run the React application:
@@ -41,7 +41,7 @@ As a user, you can:
 5. Open the app in your browser:
     ``` bash
     http://localhost:3000
-   ```
+   ```json server --watch ./src./data/db.json --port 8001
 
 ## Technologies Used
 
