@@ -3,7 +3,7 @@ import BotCard from "./BotCard";
 function BotCollection({ bots, onEnlist, onDischarge }) {
     return (
         <div className="bot-collection">
-            <h2>Bot Collection</h2>
+            <h2 className="section-title">Bot Collection</h2>
             <div className="bot-grid">
                 {bots.map(bot => (
                     <BotCard

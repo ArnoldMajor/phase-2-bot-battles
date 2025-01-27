@@ -1,3 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --clr-gunmetal: #153131;
+  --clr-light-green: #8CD790;
+  --clr-mint-cream: #F1F7ED;
+  --clr-fire-engine: #D62828;
+  --ff-poppins: 'Poppins';
+}
+
+
 .App {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: top;
+  justify-content: center;
   text-align: center;
+  background-color: var(--clr-gunmetal);
+  padding: 100px 100px;
+  gap: 100px;
+  font-family: var(--ff-poppins);
+}
+
+.section-title {
+  margin-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+  color: #fff;
+}
+
+.bot-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.army-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.bot-card {
+  background-color: var(--clr-mint-cream);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+}
+
+.bot-avatar {
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.bot-name {
+  color: var(--clr-gunmetal);
+  margin-bottom: 10px;
+}
+
+.bot-class {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.bot-stats {
+  margin-bottom: 5px;
+  font-size: 0.85rem;
+}
+
+.button {
+  background-color: var(--clr-gunmetal);
+  border: none;
+  color: var(--clr-mint-cream);
+  padding: 2px 10px;
+  margin: 2px;
+  border-radius: 3px;
+}
+
+.button:hover {
+  background-color: var(--clr-light-green);
+  color: var(--clr-gunmetal);
+}
+
+.discharge {
+  background-color: var(--clr-fire-engine);
+}
+
+.discharge:hover {
+  background-color: #E15554;
 }

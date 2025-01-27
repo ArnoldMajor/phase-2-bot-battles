@@ -36,8 +36,8 @@ function App() {
 
   return (
     <div className="App">
-      <YourBotArmy army={army} onRelease={releaseBot} onDischarge={dischargeBot} />
       <BotCollection bots={bots} onEnlist={enlistBot} onDischarge={dischargeBot} />
+      <YourBotArmy army={army} onRelease={releaseBot} onDischarge={dischargeBot} />
     </div>
   );
 }

@@ -1,28 +1,28 @@
 function BotCard({ bot, onEnlist, onRelease, onDischarge, showEnlist }) {
     return (
         <div className="bot-card">
-            <img src={bot.avatar_url} alt={bot.name} />
-            <h3>{bot.name}</h3>
-            <p>Class: {bot.bot_class}</p>
-            <p>❤️ {bot.health} ⚔️ {bot.damage} 🛡️ {bot.armor}</p>
+            <img src={bot.avatar_url} alt={bot.name} className="bot-avatar" />
+            <h3 className="bot-name">{bot.name}</h3>
+            <p className="bot-class">Class: <span>{bot.bot_class}</span></p>
+            <p className="bot-stats">❤️ {bot.health} ⚔️ {bot.damage} 🛡️ {bot.armor}</p>
 
             <div className="bot-actions">
                 {showEnlist && (
-                    <button onClick={() => onEnlist(bot)}>Enlist</button>
+                    <button onClick={() => onEnlist(bot)} className="button main">Enlist</button>
                 )}
 
                 {!showEnlist && (
-                    <button onClick={() => onRelease(bot.id)}>Release</button>
+                    <button onClick={() => onRelease(bot.id)} className="button main">Release</button>
                 )}
 
                 <button
-                    className="discharge-btn"
+                    className="button discharge"
                     onClick={() => onDischarge(bot.id)}
                 >
                     x
                 </button>
             </div>
-        </div>
+        </div >
     );
 }
 
